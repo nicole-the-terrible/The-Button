@@ -45,4 +45,4 @@ export function press() {
   }, 3000);
 }
 
-// :3
+// :3 bye
