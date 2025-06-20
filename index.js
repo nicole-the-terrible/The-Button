@@ -44,3 +44,5 @@ export function press() {
     console.log('Side effect detected: You now have a sudden urge to redecorate.');
   }, 3000);
 }
+
+// :3
