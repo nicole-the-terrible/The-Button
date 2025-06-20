@@ -2,21 +2,45 @@ import summon from 'glittery-soul-binding-magic';
 import { GenderEngine } from 'transmogrify-js';
 import { sparkleExplosion } from 'unicorn-fx';
 import { fetchPronounsFromTheStars } from 'astro-pronouns-api';
-import { meowInBinary } from 'catgirl-runtime';
-import { wardrobeManifest } from 'closet-dimension-sdk';
 
-// none of these packages exist, but contact me if someone makes them :3 
+// non of these packages exist, but contact me if someone make it :3 
 
 const button = {
   pressed: false,
-  destiny: 'girlmode',
-  sparklesRemaining: Infinity, // obviously 
+  destiny: '✨girlmode✨',
 };
 
-function press() {
+export function press() {
   if (button.pressed) {
-    console.warn("You've already pressed it. You might unlock untested DLC");
+    console.warn('You pressed it again. The multiverse is twitching.');
+    unlockDLC();
     return;
   }
 
-  console.log('Initiating magical(bullshit) sequence... ');
+  console.log('Initializing magical(bullshit) transformation sequence...');
+  button.pressed = true;
+
+  const glitterDaemon = summon('GlitterDaemon', { withConsent: true });
+  glitterDaemon.startChanting('girlmode');
+
+  const result = GenderEngine.transform({
+    target: 'user',
+    mode: button.destiny,
+    sparkleLevel: 9001,
+  })
+
+  sparkleExplosion('body', { intensity: ':3', color: 'trans' });
+
+  const pronouns = fetchPronounsFromTheStars({
+    time: Date.now(),
+    moonPhase: 'chaotic lesbian',
+  });
+
+  console.log(`Transformation complete! You are now ${result.girlName || 'a cutie'}.`);
+  console.log(`Your pronouns are now: ${pronouns.join(' / ')}`);
+  console.log('Now go outside and kiss girls');
+
+  setTimeout(() => {
+    console.log('Side effect detected: You now have a sudden urge to redecorate.');
+  }, 3000);
+}
