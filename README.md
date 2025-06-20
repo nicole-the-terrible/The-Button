@@ -15,7 +15,7 @@ import { press } from 'the-button';
 press(); // 💃✨
 ```
 
-That's it. You press it, you transform. No HRT. No surgeries. No voice training.
+That's it. You press it, you transform. No HRT. No surgeries. No voice training. Instant girls 
 
 ---
 
